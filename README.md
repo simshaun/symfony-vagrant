@@ -16,7 +16,19 @@ Environment Information
 Installed Components
 ========================
 
-Ruby
+ - Apache2
+ - Compass
+ - Composer
+ - Less
+ - Git
+ - Memcached
+ - MySQL
+ - NodeJS
+ - PHP
+ - Ruby
+ - SASS
+ - SQLite
+ - XDebug
 
 
 Symfony2
