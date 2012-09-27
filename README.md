@@ -37,24 +37,24 @@ Symfony2
 1) Installing
 ----------------------------------
 
- 1. Ensure you have the following tools installed on your computer:
+Ensure you have the following tools installed on your computer:
 
-   - Vagrant (http://vagrantup.com)
-   - VirtualBox (http://www.virtualbox.com)
-   - PHP (http://www.php.net)
-   - GIT (http://git-scm.com)
-   - Composer (http://getcomposer.org)
+ - Vagrant (http://vagrantup.com)
+ - VirtualBox (http://www.virtualbox.com)
+ - PHP (http://www.php.net)
+ - GIT (http://git-scm.com)
+ - Composer (http://getcomposer.org)
 
- 2. Clone this repo and the vagrant submodule:
+ 1. Clone this repo and the vagrant submodule:
 
         git clone --recursive git://github.com/simshaun/symfony-vagrant.git
 
- 3. Install Symfony in the root of the symfony-vagrant repo.
+ 2. Install Symfony in the root of the symfony-vagrant repo.
     Follow the installation instructions on http://symfony.com/download
 
- 4. `cd` to the **vagrant** folder.
+ 3. `cd` to the **vagrant** folder.
 
- 5. Run `vagrant up`. This may take a few minutes.
+ 4. Run `vagrant up`. This may take a few minutes.
 
 
 2) Post-Install
