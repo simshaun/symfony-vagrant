@@ -1,0 +1,3 @@
+[submodule "vagrant/cookbooks"]
+	path = vagrant/cookbooks
+	url = git@github.com:simshaun/vagrant-cookbooks.git
