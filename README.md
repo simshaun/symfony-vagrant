@@ -52,16 +52,9 @@ Symfony2
  3. Install Symfony in the root of the symfony-vagrant repo.
     Follow the installation instructions on http://symfony.com/download
 
- 4. [optional] Rename **app/config/parameters.yml.dist** to **app/config/parameters.yml**.
+ 4. `cd` to the **vagrant** folder.
 
-        mv app/config/parameters.yml.dist app/config/parameters.yml
-
-    *parameters.yml* is not version-controlled by default since
-    it will likely contain sensitive information.
-
- 5. `cd` to the **vagrant** folder.
-
- 6. Run `vagrant up`. This may take a few minutes.
+ 5. Run `vagrant up`. This may take a few minutes.
 
 
 2) Post-Install
