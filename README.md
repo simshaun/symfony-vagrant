@@ -39,11 +39,11 @@ Symfony2
 
  1. Ensure you have the following tools installed on your computer:
 
-     - Vagrant (http://vagrantup.com)
-     - VirtualBox (http://www.virtualbox.com)
-     - PHP (http://www.php.net)
-     - GIT (http://git-scm.com)
-     - Composer (http://getcomposer.org)
+   - Vagrant (http://vagrantup.com)
+   - VirtualBox (http://www.virtualbox.com)
+   - PHP (http://www.php.net)
+   - GIT (http://git-scm.com)
+   - Composer (http://getcomposer.org)
 
  2. Clone this repo and the vagrant submodule:
 
