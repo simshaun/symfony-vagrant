@@ -42,6 +42,7 @@ Symfony2
      - Vagrant (http://vagrantup.com)
      - VirtualBox (http://www.virtualbox.com)
      - PHP (http://www.php.net)
+     - GIT (http://git-scm.com)
      - Composer (http://getcomposer.org)
 
  2. Clone this repo and the vagrant submodule:
