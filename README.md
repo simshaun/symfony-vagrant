@@ -42,14 +42,13 @@ Ensure you have the following tools installed on your computer:
  - GIT (http://git-scm.com)
  - Composer (http://getcomposer.org)
 
- 1. Clone this repo and the vagrant submodule:
+ 1. Clone this repo with the cookbooks submodule:
 
         git clone --recursive git://github.com/simshaun/symfony-vagrant.git
 
- 2. Edit **vagrant/Vagrantfile** for your needs.
+ 2. Edit **vagrant/Vagrantfile** to suit your needs.
 
- 3. Install Symfony in the root of the symfony-vagrant repo.
-    Follow the installation instructions on http://symfony.com/download
+ 3. Install Symfony using the installation instructions on http://symfony.com/download
 
  4. `cd` to the **vagrant** folder and run `vagrant up`. This may take a few minutes.
 
@@ -57,13 +56,11 @@ Ensure you have the following tools installed on your computer:
 Post-Install
 ========================
 
-Symfony restricts access to **app_dev.php** and **config.php** by default.
+Symfony limits access to **app_dev.php** and **config.php**.
 
-If you need to use either of these files:
+To use either of these files:
 
- 1. Open each file in a text editor.
-
- 2. At the top of the file, add the *Vagrant box IP* (default: 33.33.33.10) to the
+ 1. At the top of each file, add the *Vagrant box IP* (default: 33.33.33.10) to the
     array of allowed REMOTE_ADDR.
 
 
@@ -96,7 +93,7 @@ you can host multiple projects from one box.
           }
         }
 
- 2. On the host machine, add a new line to your `hosts` file for each project's `server_name`
+ 2. On the host machine, add a new line to your `hosts` file with each projects' `server_name` value
 
     For example:
 
