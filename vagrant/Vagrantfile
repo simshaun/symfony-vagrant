@@ -1,6 +1,32 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# -----------------------------------------------------------------------------
+# Configuration:
+# -----------------------------------------------------------------------------
+# host_project_folder:  Where project resides on the host
+#                         default: relative to the vagrant folder
+# guest_project_folder: Where the project resides in the guest VM
+# guest_docroot:        Where Apache serves files within the guest VM
+# guest_ip:             IP address that guest is accessible from on the host
+# host_port:            Guest VM will forward port 80 to this port on the host
+
+host_project_folder   = "../"
+guest_project_folder  = "/home/vagrant/web-app"
+guest_docroot         = guest_project_folder + "/web"
+php_timezone          = "America/New_York"
+
+# You can probably get away with not changing these:
+
+guest_ip              = "33.33.33.10"
+host_port             = 8080
+xdebug_remote_enabled = 1
+xdebug_remote_host    = "33.33.33.1"
+xdebug_remote_port    = 9000
+
+# -----------------------------------------------------------------------------
+
+
 Vagrant::Config.run do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "precise32-simshaun"
@@ -9,26 +35,31 @@ Vagrant::Config.run do |config|
   # Assign this VM to a bridged network, allowing you to connect directly to a
   # network using the host's network device. This makes the VM appear as another
   # physical device on your network.
-  config.vm.network :hostonly, "33.33.33.10"
+  config.vm.network :hostonly, guest_ip
   config.vm.network :bridged
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
-  config.vm.forward_port 80, 8080
+  config.vm.forward_port 80, host_port
 
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
-  # config.vm.share_folder "v-data", "/vagrant_data", "../data"
-  config.vm.share_folder("web-app", "/home/vagrant/web-app", "../", :owner => "vagrant")
+  # config.vm.share_folder("web-app", "/home/vagrant/web-app", "../", :owner => "vagrant")
+  config.vm.share_folder("web-app", guest_project_folder, host_project_folder, :owner => "vagrant")
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "vagrant_main"
     chef.json = {
+      "app" => {
+        "docroot" => guest_docroot,
+        "php_timezone" => php_timezone
+      },
       "xdebug" => {
-        "remote_enable" => "1",
-        "remote_host" => "33.33.33.1"
+        "remote_enable" => xdebug_remote_enabled,
+        "remote_host" => xdebug_remote_host,
+        "remote_port" => xdebug_remote_port
       }
     }
   end
