@@ -52,6 +52,11 @@ Ensure you have the following tools installed on your computer:
 
  4. `cd` to the **vagrant** folder and run `vagrant up`. This may take a few minutes.
 
+ 5. Try to access the site. Unless you changed the server name and port in the Vagrantfile,
+    the URL should be http://localhost:8080/. Edit your hosts file if you want a different URL.
+
+        33.33.33.10  myproject
+
 
 Post-Install
 ========================
