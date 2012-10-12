@@ -101,3 +101,13 @@ you can host multiple projects from one box.
         33.33.33.10  site2
 
     `33.33.33.10` is the IP specified in the Vagrantfile `guest_ip` variable.
+
+
+Troubleshooting
+=============================
+
+ 1. **Vagrant is complaining about the box's VBoxGuestAdditions not matching the host version.**
+
+    The VBoxGuestAdditions in the guest box are probably older than the ones you have on your host machine.
+
+    There is a gem you can install called [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) that upgrades the guest additions on the guest box automatically.
