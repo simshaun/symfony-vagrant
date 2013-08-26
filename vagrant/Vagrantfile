@@ -44,8 +44,8 @@ xdebug_remote_port    = 9000
 
 Vagrant::Config.run do |config|
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "precise32-simshaun"
-  config.vm.box_url = "https://s3.amazonaws.com/simshaun/vagrant/precise32-simshaun.box"
+  config.vm.box = "precise32"
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   # Assign this VM to a bridged network, allowing you to connect directly to a
   # network using the host's network device. This makes the VM appear as another
