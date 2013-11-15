@@ -37,7 +37,7 @@ Installation
 Ensure you have the following tools installed on your computer:
 
  - Vagrant (http://vagrantup.com)
- - VirtualBox (http://www.virtualbox.com)
+ - VirtualBox (http://www.virtualbox.org)
  - PHP (http://www.php.net)
  - GIT (http://git-scm.com)
  - Composer (http://getcomposer.org)
